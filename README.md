@@ -10,8 +10,8 @@ Export_ID [must be unique number for each export], Path and Pseudo [path].
 
 4\. test by mounting NFS share:
 
-<docker node IP>:/shared/path /mnt/path
+docker_node_IP:/shared/path /mnt/path
 
 check available exports on the server:
 
-showmount -e <docker node IP>
+showmount -e docker_node_IP
