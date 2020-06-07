@@ -4,9 +4,6 @@ services:
   nfs:
     image: nfs
     container_name: nfs
-    environment:
-      TZ: 'Europe/Warsaw'
-      NFS_EXPORT_0: '/mnt/dane'
     networks:
       xmsnet:
     ports:
