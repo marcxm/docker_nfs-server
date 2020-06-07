@@ -1,4 +1,6 @@
-# **Ganesha userspace nfs server.**
+# **docker_nfs-server**  
+
+Ganesha NFS user-space server  
 
 1\. modify 'docker-compose.yml' to bind given local directory that you want to share via NFS
 
