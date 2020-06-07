@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.3'
 
 services:
   nfs:
@@ -13,6 +13,7 @@ services:
       - ./ganesha.conf:/etc/ganesha/ganesha.conf
       - /mnt/dane:/mnt/dane
     command: './start.sh'
+    privileged: true
 
 networks:
   xmsnet:
