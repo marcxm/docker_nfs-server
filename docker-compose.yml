@@ -1,0 +1,23 @@
+version: '2.0'
+
+services:
+  nfs:
+    image: nfs
+    container_name: nfs
+    environment:
+      TZ: 'Europe/Warsaw'
+      NFS_EXPORT_0: '/mnt/dane'
+    networks:
+      xmsnet:
+    ports:
+      - "2049:2049/tcp"
+    restart: always
+    volumes:
+      - ./ganesha.conf:/etc/ganesha/ganesha.conf
+      - /mnt/dane:/mnt/dane
+    command: './start.sh'
+
+networks:
+  xmsnet:
+    external:
+      name: xmsnet
