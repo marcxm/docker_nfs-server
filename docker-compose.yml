@@ -5,7 +5,7 @@ services:
     image: nfs
     container_name: nfs
     networks:
-      xmsnet:
+      mynetwork:
     ports:
       - "2049:2049/tcp"
     restart: always
@@ -16,6 +16,6 @@ services:
     privileged: true
 
 networks:
-  xmsnet:
+  mynetwork:
     external:
-      name: xmsnet
+      name: mynetwork
